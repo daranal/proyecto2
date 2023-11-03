@@ -1,0 +1,50 @@
+#header {
+    position: relative;
+    margin: 0;
+    padding-top: 0px;
+  }
+
+body{
+  margin:0px;
+  }
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    height: 60px; /* Set the fixed height of the navbar */
+    scrollbar-gutter: stable both-edges;
+}
+
+/* Styling for the user information */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+/* Styling for the cart button and icon */
+button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+.car-icon {
+    width: 1.5rem; /* Adjust the size as needed */
+}
+
+
+
+
+
+
