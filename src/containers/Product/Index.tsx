@@ -1,4 +1,4 @@
-import "./Index.css"
+import "./Index.scss"
 import { useNavigate } from "react-router";
 
 interface ProductProps {

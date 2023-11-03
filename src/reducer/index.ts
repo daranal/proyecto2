@@ -13,7 +13,13 @@ export const reducerFn = (state: StateInterface, action: ActionInterface): State
             return {
                 ...state,
                 products: payload as ProductInterface[]
-            }
+            }   
+        case "ADD_TO_CART":
+            const updatedCart = [...state.shoppingCart, payload as ProductInterface];
+            return {
+                ...state,
+                shoppingCart: updatedCart
+            };
         default: return state
     }
 }

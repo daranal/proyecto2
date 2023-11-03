@@ -1,24 +1,28 @@
-import React, { useContext } from 'react';
-import { useParams } from "react-router-dom"
-import { ctx } from '../../context'
-import { ProductInterface } from '../../globalTypes';
+import { Fragment, useContext } from "react";
+import { Product } from "../../containers/Product/Index";
+import { ctx } from "../../context";
+import { StateInterface } from "../../globalTypes";
+import { JsxFragment } from "typescript";
 
-const ProductDetail: React.FC = (): JSX.Element => {
-    const state = useContext(ctx)
-    const { title } = useParams()
-    const product: ProductInterface = state?.products.find(
-        product => product.title.trim() === title?.trim()
-    ) as ProductInterface
+const Cart: React.FC = (): JSX.Element => {
+    const state = useContext(ctx) as StateInterface
 
-    console.log("Product", product)
-    return (
-        <div>
-            <h2>{product.title}</h2>
-            <p>Description: {product.description}</p>
-            <p>Price: ${product.price}</p>
-            <img src={product.image} alt={product.title} />
-        </div>
+    return(
+        <Fragment>
+        {state.shoppingCart.length ? (
+            <Fragment>
+            {state.shoppingCart.map(product => (
+                <Product key={product.id}
+                image={product.image}
+                title={product.title} 
+                />
+            ))}
+            </Fragment>
+        ) : (
+            <h2>Cart is empty</h2>
+        )}
+        </Fragment>
     )
 }
 
-export { ProductDetail }
+export { Cart }

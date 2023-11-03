@@ -1,20 +1,21 @@
-  .Product {
-    width: 100%;
-    height: 50;
-    margin-bottom: 20px;
-  }
+.Product {
+  width: 100%;
+  height: 50;
+  margin-bottom: 20px;
+}
 
-  .Product__thumbnail {
-    max-height: 200px;
-    height:  200px;
-    width: 200px;
-    object-fit: contain;
-  }
+.Product__thumbnail {
+  max-height: 200px;
+  height: 200px;
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
 
-  .Product__thumbnail img {
-    max-height: 200px;
-    height:  200px;
-    width: 200px;
-    object-fit: contain;
-  }
-
+.Product__thumbnail img {
+  max-height: 200px;
+  height: 200px;
+  width: 200px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=Index.css.map */

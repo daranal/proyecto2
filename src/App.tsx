@@ -6,6 +6,7 @@ import { reducerFn, initialState } from './reducer';
 import { Home } from "./pages/Home"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { ProductDetail } from './pages/ProductDetail';
+import { Cart } from './pages/Cart';
 import { Layout } from './layout';
 
 function App(): JSX.Element {
@@ -26,7 +27,8 @@ function App(): JSX.Element {
             <Layout>
               <Routes>
                 <Route path='/' element={<Home />} />
-                <Route path='products/:title' element={<ProductDetail />} />
+                <Route path='products/:title' element={<ProductDetail dispatch={dispatch}/>} />
+                <Route path='cart' element={<Cart />} />
               </Routes>
             </Layout>
           </BrowserRouter>
