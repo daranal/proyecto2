@@ -19,7 +19,13 @@ export const reducerFn = (state: StateInterface, action: ActionInterface): State
             return {
                 ...state,
                 shoppingCart: updatedCart
-            };
+            }
+        case "REMOVE_FROM_CART":
+                const updatedCart2 = state.shoppingCart.filter((item) => item.id !== payload);
+                return {
+                    ...state,
+                    shoppingCart: updatedCart2,
+                };      
         default: return state
     }
 }

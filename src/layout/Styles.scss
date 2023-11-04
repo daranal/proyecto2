@@ -1,0 +1,75 @@
+#header {
+    position: relative;
+    margin: 0;
+    padding-top: 0;
+}
+
+body {
+    margin: 0;
+}
+
+.button-home {
+    background-color: #fff000;
+    border-radius: 12px;
+    color: #000;
+    cursor: pointer;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-align: center;
+    transition: 200ms;
+    width: 100%;
+    box-sizing: border-box;
+    border: 0;
+    font-size: 16px;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.button-home:not(:disabled):hover,
+.button-home:not(:disabled):focus {
+    outline: 0;
+    background: #f4e603;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, .2), 0 3px 8px 0 rgba(0, 0, 0, .15);
+}
+
+.button-home:disabled {
+    filter: saturate(0.2) opacity(0.5);
+    -webkit-filter: saturate(0.2) opacity(0.5);
+    cursor: not-allowed;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    height: 60px;
+    border-bottom: 2px solid #007bff;
+    position: relative;
+}
+
+.styled-image {
+    border: 1px solid black;
+    background-color: #FFFFFF;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.styled-image:hover {
+    cursor: pointer;
+    background-color: rgb(158, 158, 158);
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.styled-image:focus {
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+}
+
+.styled-image:focus-visible {
+    box-shadow: none;
+}

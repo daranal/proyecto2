@@ -1,5 +1,5 @@
-import "./Index.scss"
 import { useNavigate } from "react-router";
+import '../../App.scss'
 
 interface ProductProps {
     title: string;
@@ -11,11 +11,12 @@ const Product: React.FC<ProductProps> = ({title, image}): JSX.Element => {
     const navigate = useNavigate()
     const handleClick = () => navigate(`products/${title.trim()}`)
 
-    return (
-        <div className="Product" onClick={handleClick}>
+    return (        
+        <div className="Product">
             <div className="Product__thumbnail">
-                <img src={image} alt={title} />
+                <img src={image} alt={title} onClick={handleClick} />
             </div>
+            
             <h2 className="Product__title">
             {title}
             </h2>
