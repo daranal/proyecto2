@@ -6,4 +6,4 @@ https://github.com/daranal/proyecto2/blob/main/DW2%20Manual%20tecnico%20Proyecto
 
 Integrantes
 Douglas Ivan Arana Lopez 9490-15-13243
-M
+Marlon Vladimir Chajón Zepeda 9490-19-2637
